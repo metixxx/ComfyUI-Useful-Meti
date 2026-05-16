@@ -98,7 +98,7 @@ This makes it easy to:
 
 ## Repository
 
-🔗 **GitHub:** [https://github.com/metixxx/ComfyUI-Generation-Time-Meti](https://github.com/metixxx/ComfyUI-Generation-Time)
+🔗 **GitHub:** [https://github.com/metixxx/ComfyUI-Generation-Time](https://github.com/metixxx/ComfyUI-Generation-Time)
 
 ## License
 
