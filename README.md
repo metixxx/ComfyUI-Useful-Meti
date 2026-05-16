@@ -82,7 +82,7 @@ You can use this node to **measure and compare** the generation time of differen
 
 The image below shows a grid comparison showing how the runtime (`(Runtime: 2m 34s)`) appears under each generated image.
  
-
+![Zoomed Detail with Runtime Text](images/zoomed-detail.png)
 
 This makes it easy to:
 - **Compare performance** across different settings
