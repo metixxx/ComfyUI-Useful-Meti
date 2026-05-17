@@ -1,25 +1,15 @@
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
-
 [project]
-name = "comfyui-generation-time"
-version = "1.0.2"
-description = "ComfyUI node that outputs workflow execution time"
+name = "comfyui-useful-meti"
+version = "1.0.0"
+description = "Useful custom nodes for ComfyUI by Meti"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [{name = "Metixxx", email = "sharifi.3d@gmail.com"}]
-keywords = ["comfyui", "timer", "generation-time"]
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: Developers",
-    "Programming Language :: Python :: 3",
-]
-
-[project.urls]
-Repository = "https://github.com/metixxx/ComfyUI-Generation-Time"
 
 [tool.comfy]
 PublisherId = "metixxx"
-DisplayName = "Generation Time - Meti"
-Icon = "https://raw.githubusercontent.com/metixxx/ComfyUI-Generation-Time/main/images/node-example.png"
+DisplayName = "Meti Suite"
+Icon = "https://raw.githubusercontent.com/metixxx/ComfyUI-Useful-Meti/main/images/icon.png"
+
+[project.urls]
+Repository = "https://github.com/metixxx/ComfyUI-Useful-Meti"
