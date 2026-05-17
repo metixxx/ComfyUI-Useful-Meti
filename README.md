@@ -86,13 +86,9 @@ The image below shows a grid comparison showing how the runtime (`(Runtime: 2m 3
   <tr>
     <td align="center">
       <img src="images/zoomed-detail.png" alt="Zoomed Detail" width="100%">
-      <br />
-      <em>Zoomed view with runtime text</em>
     </td>
     <td align="center">
       <img src="images/runtime.png" alt="Runtime Grid" width="100%">
-      <br />
-      <em>Grid comparison with runtime display</em>
     </td>
   </tr>
 </table>
