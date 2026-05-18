@@ -149,22 +149,23 @@ Your support helps me add new features, improve documentation, and keep everythi
 
 <br />
 
-<div align="center">
-  <table style="margin: 0 auto;">
-    <tr>
-      <td align="center" style="padding: 0 30px;">
-        <img src="images/qrcode-bep20.png" width="150" />
-        <br />
-        <strong>BEP20</strong>
-      </td>
-      <td align="center" style="padding: 0 30px;">
-        <img src="images/qrcode-trc20.png" width="150" />
-        <br />
-        <strong>TRC20</strong>
-      </td>
-    </tr>
-  </table>
-</div>
+<table width="100%" style="max-width: 500px; margin: 0 auto;">
+  <tr>
+    <td align="center" width="35%">
+      <img src="images/qrcode-bep20.png" width="160" />
+      <br />
+      <strong>BEP20</strong>
+    </td>
+    <td align="center" width="30%">
+      •••
+    </td>
+    <td align="center" width="35%">
+      <img src="images/qrcode-trc20.png" width="160" />
+      <br />
+      <strong>TRC20</strong>
+     </td>
+   </tr>
+</table>
 
 <br />
 
