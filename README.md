@@ -101,18 +101,20 @@ Save images with custom path and get filename + full path as output.
 | `filename` | STRING | Name of the saved file |
 | `full_path` | STRING | Full path of the saved file |
 
-<div style="text-align: center; white-space: nowrap;">
-  <div style="display: inline-block; margin: 0 20px;">
-    <img src="images/SaveImageAdvanced-01.png" width="220" style="border-radius: 6px;" />
-    <br />
-    <em>Save Mode</em>
-  </div>
-  <div style="display: inline-block; margin: 0 20px;">
-    <img src="images/SaveImageAdvanced-02.png" width="220" style="border-radius: 6px;" />
-    <br />
-    <em>Preview Mode</em>
-  </div>
-</div>
+<table width="100%" style="max-width: 600px; margin: 0 auto;">
+  <tr>
+    <td align="center" width="50%">
+      <img src="images/SaveImageAdvanced-01.png" width="220" style="border-radius: 6px;" />
+      <br />
+      <em>Save Mode</em>
+    </td>
+    <td align="center" width="50%">
+      <img src="images/SaveImageAdvanced-02.png" width="220" style="border-radius: 6px;" />
+      <br />
+      <em>Preview Mode</em>
+    </td>
+  </tr>
+</table>
 
 ---
 
