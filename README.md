@@ -18,6 +18,14 @@ A collection of practical custom nodes for ComfyUI by Meti.sh
 | **📸 Past Images** | Keeps a history of your generated images (up to 10) and shows them in a live-updating grid. |
 | **💾 Save Image Advanced** | Saves images with custom path and outputs filename & full path or Just Preview |
 
+<img src="images/Useful-Meti-01.png" width="500" height="300" style="display: block; margin-left: auto; margin-right: auto; object-fit: contain; background-color: #f0f0f0;" />
+
+<div style="text-align: center;">
+  <img src="images/Useful-Meti-01.png" style="max-width: 100%; height: auto; object-fit: contain; background-color: #f0f0f0;" />
+</div>
+
+> 📸 [View more examples](images/Useful-Meti-02.png)
+> 
 ---
 
 ## 🚀 Installation
