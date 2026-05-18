@@ -119,7 +119,7 @@ If you find this useful, you can send a donation via USDT:
 
 <br />
 
-<div style="display: flex; justify-content: center; gap: 100px;">
+<div style="display: flex; justify-content: center; gap: 70px;">
   <img src="images/qrcode-bep20.png" width="200" />
   <img src="images/qrcode-trc20.png" width="200" />
 </div>
