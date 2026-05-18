@@ -32,10 +32,10 @@ class ImageHistoryBuffer:
             }
         }
     
-    RETURN_TYPES = ("STRING", "STRING")
-    RETURN_NAMES = ("history_names", "history_paths")
+    RETURN_TYPES = ("IMAGE", "STRING", "STRING")
+    RETURN_NAMES = ("passthrough", "history_names", "history_paths")
     FUNCTION = "process"
-    CATEGORY = "Meti Timer"
+    CATEGORY = "Meti Suite"
 
     @classmethod
     def IS_CHANGED(cls, image, preset, image_name_opt=None, image_path_opt=None, reset_trigger=None):
@@ -50,6 +50,18 @@ class ImageHistoryBuffer:
             "10 Images": 10,
         }
         return presets.get(preset, 2)
+
+    def extract_name_from_path(self, path):
+        if not path:
+            return ""
+        path_str = str(path)
+        if "/" in path_str:
+            path_str = path_str.split("/")[-1]
+        if "\\" in path_str:
+            path_str = path_str.split("\\")[-1]
+        if "." in path_str:
+            path_str = path_str.split(".")[0]
+        return path_str
 
     def clean_path(self, path):
         if not path:
@@ -94,7 +106,7 @@ class ImageHistoryBuffer:
             self.path_history = []
             self.last_preset = preset
             self.last_reset = reset_trigger
-            return ("✅ Reset triggered!", "✅ Reset triggered!")
+            return (image, "✅ Reset triggered!", "✅ Reset triggered!")
         self.last_reset = reset_trigger
         
         if self.last_preset != preset:
@@ -106,17 +118,27 @@ class ImageHistoryBuffer:
         raw_name = self.clean_name(image_name_opt) if image_name_opt else ""
         raw_path = self.clean_path(image_path_opt) if image_path_opt else ""
         
+        # تعیین نام نمایشی
         if raw_name:
             display_name = raw_name
+        elif raw_path:
+            display_name = self.extract_name_from_path(raw_path)
         else:
             display_name = f"Image_{len(self.history) + 1}"
         
-        if raw_path and raw_name:
-            full_path = f"{raw_path}\\{raw_name}"
+        # تشخیص نوع مسیر (کامل یا فقط پوشه)
+        is_full_path = False
+        if raw_path:
+            if raw_path.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.tiff')):
+                is_full_path = True
+        
+        # تعیین مسیر کامل
+        if raw_path and is_full_path:
+            full_path = raw_path
+        elif raw_path and display_name:
+            full_path = f"{raw_path}\\{display_name}"
         elif raw_path:
             full_path = raw_path
-        elif raw_name:
-            full_path = f"Unknown path_{len(self.history) + 1}\\{raw_name}"
         else:
             full_path = f"Unknown path_{len(self.history) + 1}"
         
@@ -149,7 +171,7 @@ class ImageHistoryBuffer:
         history_info_paths = "\n".join(history_lines_paths)
         
         return {
-            "result": (history_info_names, history_info_paths),
+            "result": (image, history_info_names, history_info_paths),
             "ui": {"images_info": history_images_info}
         }
 
@@ -159,5 +181,5 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "ImageHistoryBuffer": "📸 Past Images",
+    "ImageHistoryBuffer": "📸 Past Images [meti]",
 }

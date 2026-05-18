@@ -82,5 +82,5 @@ NODE_CLASS_MAPPINGS = {
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "MetiGenerationTime": "⏱️ Generation Time",
+    "MetiGenerationTime": "⏱️ Generation Time [meti]",
 }

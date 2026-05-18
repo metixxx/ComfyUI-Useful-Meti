@@ -1,134 +1,139 @@
-# ⏱️ Generation Time - Meti
+# 🔧 ComfyUI-Useful-Meti
 
-A custom node for ComfyUI that outputs the total execution time of your workflow. Based on [Shannooty/ComfyUI-Timer-Nodes](https://github.com/Shannooty/ComfyUI-Timer-Nodes).
+A collection of practical custom nodes for ComfyUI by Meti.
 
-## Features
+---
 
-- **Auto Timer:** Timer starts automatically when workflow begins. No need for a separate start node.
-- **Place Anywhere:** Can be placed at any position in your workflow - always shows total execution time.
-- **Data Passthrough:** Passes any type of data (images, text, etc.) without modification.
-- **Two Output Formats:** Provides both labeled time and raw runtime string.
+## 📦 Nodes
 
-## Installation
+| Node | Description |
+| :--- | :--- |
+| **⏱️ Generation Time** | Outputs the total execution time of your workflow. |
+| **📸 Past Images** | Keeps a history of your generated images (up to 10) and shows them in a live-updating grid. |
+| **💾 Save Image Advanced** | Saves images with custom path and outputs filename & full path. |
 
-1. Navigate to your ComfyUI `custom_nodes` folder:
-   
-   ComfyUI/custom_nodes/
-   
-   Clone this repository:
+---
+
+## 🚀 Installation
+
+1. Go to `ComfyUI/custom_nodes/`
+2. Clone this repository:
+   ```bash
+   git clone https://github.com/metixxx/ComfyUI-Useful-Meti.git
    ```
-   git clone https://github.com/metixxx/ComfyUI-Generation-Time.git
-   ```
-
 3. Restart ComfyUI
 
-## Usage
+> ✅ No extra dependencies needed. Works with ComfyUI's default environment.
 
-After restart, find the node **`⏱️ Generation Time`** under category **`Generation Time - Meti`**
+---
 
-### Node Interface
+## ⚙️ How to Use
 
-![Node Example](images/node-example.png)
+### ⏱️ Generation Time
 
-### Inputs
+Place it anywhere in your workflow. Timer starts automatically.
 
-| Input | Type | Default | Description |
-|-------|------|---------|-------------|
-| input_any | any | - | Any data (image, text, etc.) - passes through unchanged |
-| input_string | STRING | "Generation Time" | Custom label to display before the time |
+| Inputs | Type | Description |
+|--------|------|-------------|
+| `input_any` | any | Data to pass through unchanged |
+| `input_string` | STRING | Label for the time (default: "Generation") |
 
-### Outputs
+| Outputs | Type | Example |
+|---------|------|---------|
+| `passthrough` | any | Your original image/text |
+| `time_with_label` | STRING | `"Generation: 2m 34s"` |
+| `time_only` | STRING | `"(Runtime: 2m 34s)"` |
 
-| Output | Type | Description | Example |
-|--------|------|-------------|---------|
-| passthrough | any | Same as input_any (for chaining nodes) | Your original image/text |
-| time_with_label | STRING | Label + runtime | "Generation: 2m 34s" |
-| time_only | STRING | Only runtime | "(Runtime: 2m 34s)" |
+![GenerationTime](images/GenerationTime-example01.png)
 
-## Examples
+Use this node to compare different models, samplers, or schedulers:
 
-### Simple Example (End of Workflow)
+![GenerationTime](images/GenerationTime-example02.png)
 
-Place the node at the end of your workflow:
+> 📸 [View more examples](images/GenerationTime-example03.png)
 
-```
-[KSampler] ---(image)---> [⏱️ Generation Time] ---(passthrough)---> [Save Image]
-                              |
-                              ---(time_with_label)---> [Show Text]
-```
+---
 
-### Advanced Example (Middle of Workflow)
+### 📸 Past Images
 
-You can place this node **anywhere** in your workflow. The timer always shows the total execution time from start to finish, regardless of node position.
+Keeps a history of your generated images (up to 10) and shows them in a live-updating grid.  
+The grid preserves each image's **original aspect ratio** inside the frame, so you can easily compare different outputs.
 
-![Workflow Example](images/workflow-example.png)
+| Inputs | Type | Description |
+|--------|------|-------------|
+| `image` | IMAGE | Image batch to store |
+| `preset` | INT | 2, 4, 6, 8, or 10 images |
+| `image_name (opt)` | any | Optional image name |
+| `image_path (opt)` | any | Optional file path |
+| `reset_trigger` | BUTTON | Clears all history |
 
-In the example above, the node is placed after WD14Tagger and CR Overlay Text, but the output still represents the total execution time of the entire workflow.
+| Outputs | Type | Description |
+|---------|------|-------------|
+| `passthrough` | IMAGE | Pass-through the input image |
+| `history_names` | STRING | List of image names |
+| `history_paths` | STRING | List of full file paths |
 
-## Use Cases
+![PastImages-01](images/PastImages-01.png)
+![PastImages-02](images/PastImages-02.png) 
 
-- **Performance Monitoring:** Track how long your workflow takes to execute
-- **Debugging:** Identify slow sections by placing nodes at different positions
-- **Metadata:** Add execution time to generated images or text outputs
-- **Batch Processing:** Log processing times for multiple runs
+---
 
+### 💾 Save Image Advanced
 
+Save images with custom path and get filename + full path as output.
 
-### 🖼️ Compare Generation Time For Model / Sampler / Scheduler
+| Inputs | Type | Description |
+|--------|------|-------------|
+| `images` | IMAGE | Image(s) to save |
+| `filename_prefix` | STRING | Prefix for the filename |
+| `custom_path` | STRING | Custom save directory (leave empty for default ComfyUI output) |
+| `mode` | `Save` / `Preview` | `Save` = writes to disk + shows preview, `Preview` = shows preview only |
 
-You can use this node to **measure and compare** the generation time of different configurations (models, samplers, schedulers). Simply place the `⏱️ Generation Time` node after your KSampler and connect the `time_only` output to a **Show Text** node, or save the time along with your image.
+| Outputs | Type | Description |
+|---------|------|-------------|
+| `image` | IMAGE | Pass-through the input image |
+| `filename` | STRING | Name of the saved file |
+| `full_path` | STRING | Full path of the saved file |
 
-#### XYZ Grid Comparison with Runtime Text
+<div style="display: flex; justify-content: center; gap: 5px;">
+<img src="images/SaveImageAdvanced-01.png" width="300"/>
+<img src="images/SaveImageAdvanced-02.png" width="300"/>
+</div>
+---
+---
+## 🙏 Credits
 
-The image below shows a grid comparison showing how the runtime (`(Runtime: 2m 34s)`) appears under each generated image.
- 
-<table>
-  <tr>
-    <td align="center">
-      <img src="images/zoomed-detail.png" alt="Zoomed Detail" width="100%">
-    </td>
-    <td align="center">
-      <img src="images/runtime.png" alt="Runtime Grid" width="100%">
-    </td>
-  </tr>
-</table>
+- **Maintainer:** [Metixxx](https://github.com/metixxx)
+- **Inspiration for Generation Time:** [Shannooty/ComfyUI-Timer-Nodes](https://github.com/Shannooty/ComfyUI-Timer-Nodes)
 
-This makes it easy to:
-- **Compare performance** across different settings
-- **Choose the fastest** sampler or scheduler for your workflow
-- **Document** which configuration produced which image with its generation time
+---
 
+## 💰 Support
 
+If you find this useful, you can send a donation via USDT:
 
-## Credits
+| Network | Wallet Address |
+|---------|----------------|
+| **BEP20** | `0x7CBf0c5D7ECd5BAcD6BD13b3b2D4e8B3Ca9542AD` |
+| **TRC20** | `TT1xEJMPNiBHtdA1pz4bCCxYgBajr1vtT1` |
 
-- **Original Project:** [Shannooty/ComfyUI-Timer-Nodes](https://github.com/Shannooty/ComfyUI-Timer-Nodes) - The foundation and core logic
-- **Maintainer:** [Metixxx](https://github.com/metixxx/ComfyUI-Generation-Time)
+<br />
 
-## Repository
+<div style="display: flex; justify-content: center; gap: 100px;">
+  <img src="images/qrcode-bep20.png" width="200" />
+  <img src="images/qrcode-trc20.png" width="200" />
+</div>
 
-🔗 **GitHub:** [https://github.com/metixxx/ComfyUI-Generation-Time](https://github.com/metixxx/ComfyUI-Generation-Time)
+<br />
 
-## License
+Thank you! 🙏
 
-This project is licensed under the same terms as the original ComfyUI-Timer-Nodes repository.
+---
 
+## ⚖️ License
 
-## Support 
+GPL-3.0. See [LICENSE](LICENSE) file for details.
 
-If you find this node useful and would like to support further development, you can send a donation via USDT:
+---
 
-### 💰 Tether USDT (BEP20)
-
-**Wallet Address:** `0x7CBf0c5D7ECd5BAcD6BD13b3b2D4e8B3Ca9542AD`
-
-![BEP20 QR](images/qrcode-bep20.png)
-
-### 💰 Tether USDT (TRC20)
-
-**Wallet Address:** `TT1xEJMPNiBHtdA1pz4bCCxYgBajr1vtT1`
-
-![TRC20 QR](images/qrcode-trc20.png)
-
-Thank you for your support! 🙏
-
+🔗 **GitHub:** [metixxx/ComfyUI-Useful-Meti](https://github.com/metixxx/ComfyUI-Useful-Meti)
