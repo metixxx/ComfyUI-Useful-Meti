@@ -101,6 +101,8 @@ Save images with custom path and get filename + full path as output.
 | `custom_path` | STRING | Custom save directory (leave empty for default ComfyUI output) |
 | `mode` | `Save` / `Preview` | `Save` = writes to disk + shows preview, `Preview` = shows preview only |
 
+<div align="center">
+	
 | Outputs | Type | Description |
 |---------|------|-------------|
 | `image` | IMAGE | Pass-through the input image |
@@ -122,6 +124,7 @@ Save images with custom path and get filename + full path as output.
        </td>
     </tr>
   </table>
+</div>
 </div>
 
 ---
