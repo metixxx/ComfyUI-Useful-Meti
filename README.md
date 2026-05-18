@@ -133,36 +133,42 @@ Save images with custom path and get filename + full path as output.
 
 ---
 
-## 💰 Support
+## 💖 Support This Project
 
-If you find this useful, you can send a donation via USDT:
+If you find these nodes useful for your workflows, please consider supporting their continued development.  
+Your support helps me add new features, improve documentation, and keep everything up to date.
+
+<br />
+
+<div align="center">
 
 | Network | Wallet Address |
-|---------|----------------|
-| **BEP20** | `0x7CBf0c5D7ECd5BAcD6BD13b3b2D4e8B3Ca9542AD` |
-| **TRC20** | `TT1xEJMPNiBHtdA1pz4bCCxYgBajr1vtT1` |
+| :--- | :--- |
+| **BEP20 (USDT)** | `0x7CBf0c5D7ECd5BAcD6BD13b3b2D4e8B3Ca9542AD` |
+| **TRC20 (USDT)** | `TT1xEJMPNiBHtdA1pz4bCCxYgBajr1vtT1` |
 
+<br />
 
-<table width="100%" style="max-width: 500px; margin: 0 auto;">
-  <tr>
-    <td align="center" width="35%">
-      <img src="images/qrcode-bep20.png" width="160" />
-      <br />
-      <strong>BEP20</strong>
-    </td>
-    <td align="center" width="30%">
-      <!-- spacer -->
-     </td>
-    <td align="center" width="35%">
-      <img src="images/qrcode-trc20.png" width="160" />
-      <br />
-      <strong>TRC20</strong>
-     </td>
-  </tr>
-</table>
+<div align="center">
+  <table style="margin: 0 auto;">
+    <tr>
+      <td align="center" style="padding: 0 30px;">
+        <img src="images/qrcode-bep20.png" width="150" />
+        <br />
+        <strong>BEP20</strong>
+      </td>
+      <td align="center" style="padding: 0 30px;">
+        <img src="images/qrcode-trc20.png" width="150" />
+        <br />
+        <strong>TRC20</strong>
+      </td>
+    </tr>
+  </table>
+</div>
 
+<br />
 
-Thank you! 🙏
+Thank you for any contribution — it truly means a lot! 🙏
 
 ---
 
