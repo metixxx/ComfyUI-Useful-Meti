@@ -103,14 +103,14 @@ Save images with custom path and get filename + full path as output.
 
 <div style="display: flex; justify-content: center; gap:5px; align-items: center;">
   <div style="text-align: center;">
-    <div style="width: 280px; height: 180px; display: flex; align-items: center; justify-content: center;">
+    <div style="width: 280px; height: 80px; display: flex; align-items: center; justify-content: center;">
       <img src="images/SaveImageAdvanced-01.png" style="max-width: 100%; max-height: 100%;" />
     </div>
     <br />
     <em>Save Mode</em>
   </div>
   <div style="text-align: center;">
-    <div style="width: 280px; height: 180px; display: flex; align-items: center; justify-content: center;">
+    <div style="width: 280px; height: 80px; display: flex; align-items: center; justify-content: center;">
       <img src="images/SaveImageAdvanced-02.png" style="max-width: 100%; max-height: 100%;" />
     </div>
     <br />
@@ -145,7 +145,7 @@ If you find this useful, you can send a donation via USDT:
       <br />
       <strong>BEP20</strong>
     </td>
-    <td style="padding: 0 40px; text-align: center;">
+    <td style="padding: 0 50px; text-align: center;">
     </td>
 	      <td style="padding: 0 40px; text-align: center;">
       <img src="images/qrcode-trc20.png" width="180" />
