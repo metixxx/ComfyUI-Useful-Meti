@@ -8,8 +8,7 @@ authors = [{name = "Metixxx", email = "sharifi.3d@gmail.com"}]
 
 [tool.comfy]
 PublisherId = "metixxx"
-DisplayName = "Meti Suite"
-Icon = "https://raw.githubusercontent.com/metixxx/ComfyUI-Useful-Meti/main/images/icon.png"
+DisplayName = "Useful-Meti"
 
 [project.urls]
 Repository = "https://github.com/metixxx/ComfyUI-Useful-Meti"
