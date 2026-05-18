@@ -1,3 +1,9 @@
+<!-- metadata
+title: "Useful-Meti: Timer, Image History & Save Nodes"
+description: "Custom nodes for ComfyUI: workflow timer, image history gallery, and advanced image saver with path output"
+tags: timer, image history, save image, generation time, past images, batch save, utility
+-->
+
 # 🔧 ComfyUI-Useful-Meti
 
 A collection of practical custom nodes for ComfyUI by Meti.
@@ -119,9 +125,17 @@ If you find this useful, you can send a donation via USDT:
 
 <br />
 
-<div style="display: flex; justify-content: center; gap: 70px;">
-  <img src="images/qrcode-bep20.png" width="200" />
-  <img src="images/qrcode-trc20.png" width="200" />
+<div style="display: flex; justify-content: center; gap: 80px;">
+  <div style="text-align: center;">
+    <img src="images/qrcode-bep20.png" width="180" />
+    <br />
+    <strong>BEP20</strong>
+  </div>
+  <div style="text-align: center;">
+    <img src="images/qrcode-trc20.png" width="180" />
+    <br />
+    <strong>TRC20</strong>
+  </div>
 </div>
 
 <br />
