@@ -44,7 +44,7 @@ A collection of practical custom nodes for ComfyUI by Meti.sh
 ### ⏱️ Generation Time
 
 Place it anywhere in your workflow. Timer starts automatically.
-
+<div align="center">
 | Inputs | Type | Description |
 |--------|------|-------------|
 | `input_any` | any | Data to pass through unchanged |
@@ -61,6 +61,8 @@ Place it anywhere in your workflow. Timer starts automatically.
 Use this node to compare different models, samplers, or schedulers:
 
 ![GenerationTime](images/GenerationTime-example02.png)
+	
+</div>
 
 > 📸 [View more examples](images/GenerationTime-example03.png)
 
