@@ -138,8 +138,6 @@ Save images with custom path and get filename + full path as output.
 If you find these nodes useful for your workflows, please consider supporting their continued development.  
 Your support helps me add new features, improve documentation, and keep everything up to date.
 
-<br />
-
 <div align="center">
 
 | Network | Wallet Address |
@@ -166,8 +164,7 @@ Your support helps me add new features, improve documentation, and keep everythi
      </td>
    </tr>
 </table>
-
-<br />
+</div>
 
 Thank you for any contribution — it truly means a lot! 🙏
 
