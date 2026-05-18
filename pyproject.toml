@@ -1,6 +1,6 @@
 [project]
 name = "comfyui-useful-meti"
-version = "1.0.0"
+version = "1.1.0"
 description = "Useful custom nodes for ComfyUI by Meti"
 readme = "README.md"
 license = {text = "MIT"}
