@@ -134,18 +134,27 @@ If you find this useful, you can send a donation via USDT:
 | **BEP20** | `0x7CBf0c5D7ECd5BAcD6BD13b3b2D4e8B3Ca9542AD` |
 | **TRC20** | `TT1xEJMPNiBHtdA1pz4bCCxYgBajr1vtT1` |
 
-<div style="text-align: center;">
-  <div style="display: inline-block; margin: 0 40px;">
-    <img src="images/qrcode-bep20.png" width="160" />
-    <br />
-    <strong>BEP20</strong>
-  </div>
-  <div style="display: inline-block; margin: 0 40px;">
-    <img src="images/qrcode-trc20.png" width="160" />
-    <br />
-    <strong>TRC20</strong>
-  </div>
-</div>
+<br />
+
+<table width="100%" style="max-width: 500px; margin: 0 auto;">
+  <tr>
+    <td align="center" width="40%">
+      <img src="images/qrcode-bep20.png" width="160" />
+      <br />
+      <strong>BEP20</strong>
+    </td>
+    <td align="center" width="20%">
+      <!-- spacer -->
+     </td>
+    <td align="center" width="40%">
+      <img src="images/qrcode-trc20.png" width="160" />
+      <br />
+      <strong>TRC20</strong>
+     </td>
+  </tr>
+</table>
+
+<br /
 
 Thank you! 🙏
 
