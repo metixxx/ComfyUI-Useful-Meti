@@ -75,6 +75,8 @@ Use this node to compare different models, samplers, or schedulers:
 Keeps a history of your generated images (up to 10) and shows them in a live-updating grid.  
 The grid preserves each image's **original aspect ratio** inside the frame, so you can easily compare different outputs.
 
+<div align="center">
+	
 | Inputs | Type | Description |
 |--------|------|-------------|
 | `image` | IMAGE | Image batch to store |
@@ -82,12 +84,17 @@ The grid preserves each image's **original aspect ratio** inside the frame, so y
 | `image_name (opt)` | any | Optional image name |
 | `image_path (opt)` | any | Optional file path |
 | `reset_trigger` | BUTTON | Clears all history |
+	
+</div>
 
+<div align="center">
+	
 | Outputs | Type | Description |
 |---------|------|-------------|
 | `passthrough` | IMAGE | Pass-through the input image |
 | `history_names` | STRING | List of image names |
 | `history_paths` | STRING | List of full file paths |
+</div>
 
 ![PastImages-01](images/PastImages-01.png)
 ![PastImages-02](images/PastImages-02.png) 
