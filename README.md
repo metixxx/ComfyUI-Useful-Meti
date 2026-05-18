@@ -101,12 +101,25 @@ Save images with custom path and get filename + full path as output.
 | `filename` | STRING | Name of the saved file |
 | `full_path` | STRING | Full path of the saved file |
 
-<div style="display: flex; justify-content: center; gap: 5px;">
-<img src="images/SaveImageAdvanced-01.png" width="300"/>
-<img src="images/SaveImageAdvanced-02.png" width="300"/>
+<div style="display: flex; justify-content: center; gap:5px; align-items: center;">
+  <div style="text-align: center;">
+    <div style="width: 480px; height: 280px; display: flex; align-items: center; justify-content: center;">
+      <img src="images/SaveImageAdvanced-01.png" style="max-width: 100%; max-height: 100%;" />
+    </div>
+    <br />
+    <em>Save Mode</em>
+  </div>
+  <div style="text-align: center;">
+    <div style="width: 480px; height: 280px; display: flex; align-items: center; justify-content: center;">
+      <img src="images/SaveImageAdvanced-02.png" style="max-width: 100%; max-height: 100%;" />
+    </div>
+    <br />
+    <em>Preview Mode</em>
+  </div>
 </div>
+
 ---
----
+
 ## 🙏 Credits
 
 - **Maintainer:** [Metixxx](https://github.com/metixxx)
@@ -125,18 +138,20 @@ If you find this useful, you can send a donation via USDT:
 
 <br />
 
-<div style="display: flex; justify-content: center; gap: 80px;">
-  <div style="text-align: center;">
-    <img src="images/qrcode-bep20.png" width="180" />
-    <br />
-    <strong>BEP20</strong>
-  </div>
-  <div style="text-align: center;">
-    <img src="images/qrcode-trc20.png" width="180" />
-    <br />
-    <strong>TRC20</strong>
-  </div>
-</div>
+<table align="center">
+  <tr>
+    <td style="padding: 0 70px; text-align: center;">
+      <img src="images/qrcode-bep20.png" width="180" />
+      <br />
+      <strong>BEP20</strong>
+    </td>
+    <td style="padding: 0 70px; text-align: center;">
+      <img src="images/qrcode-trc20.png" width="180" />
+      <br />
+      <strong>TRC20</strong>
+    </td>
+  </tr>
+</table>
 
 <br />
 
