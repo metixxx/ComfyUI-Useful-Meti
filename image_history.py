@@ -22,13 +22,30 @@ class ImageHistoryBuffer:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "image": ("IMAGE",),
-                "preset": (["2 Images", "4 Images", "6 Images", "8 Images", "10 Images"], {"default": "2 Images"}),
+                "image": ("IMAGE", {
+                    "tooltip": "Input image batch to store in history."
+                }),
+                "preset": (["2 Images", "4 Images", "6 Images", "8 Images", "10 Images"], {
+                    "default": "2 Images",
+                    "tooltip": "Maximum number of images to keep in history. Older images are automatically removed."
+                }),
             },
             "optional": {
-                "image_name_opt": (any, {"default": "", "forceInput": True, "display_name": "image_name (opt)"}),
-                "image_path_opt": (any, {"default": "", "forceInput": True, "display_name": "image_path (opt)"}),
-                "reset_trigger": ("RESET_TRIGGER",),
+                "image_name_opt": (any, {
+                    "default": "", 
+                    "forceInput": True, 
+                    "display_name": "image_name (opt)",
+                    "tooltip": "Optional: Custom name for the image.\nShown in history list and under the grid.\nExample: 'my_cat'"
+                }),
+                "image_path_opt": (any, {
+                    "default": "", 
+                    "forceInput": True, 
+                    "display_name": "image_path (opt)",
+                    "tooltip": "Optional: File path for the image.\nIf full path (ending with .png/.jpg) is provided, it will be used directly.\nOtherwise, the name will be added to the path."
+                }),
+                "reset_trigger": ("RESET_TRIGGER", {
+                    "tooltip": "Button: Click to clear ALL history (images, names, and paths)."
+                }),
             }
         }
     
@@ -79,7 +96,7 @@ class ImageHistoryBuffer:
         name_str = str(name).strip()
         if name_str.startswith('"') and name_str.endswith('"'):
             name_str = name_str[1:-1]
-        if name_str.startswith("'") and name_str.endswith("'"):
+        if name_str.startswith("'") and path_str.endswith("'"):
             name_str = name_str[1:-1]
         return name_str
 

@@ -46,8 +46,15 @@ class MetiGenerationTime:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "input_any": (any, {'forceInput': True}),
-                "input_string": ("STRING", {"default": "Generation Time", "multiline": False}),
+                "input_any": (any, {
+                    'forceInput': True, 
+                    'tooltip': "Connect any type of data (image, text, etc.). This data will be passed through unchanged."
+                }),
+                "input_string": ("STRING", {
+                    "default": "Generation Time", 
+                    "multiline": False,
+                    "tooltip": "Custom label to display before the time.\nExample: 'Render' → 'Render: 2m 34s'"
+                }),
             }
         }
     

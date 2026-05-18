@@ -6,7 +6,7 @@ tags: timer, image history, save image, generation time, past images, batch save
 
 # 🔧 ComfyUI-Useful-Meti
 
-A collection of practical custom nodes for ComfyUI by Meti.sh
+A collection of practical custom nodes for ComfyUI by Mahdi Sharifi . 
 
 ---
 
@@ -40,6 +40,8 @@ A collection of practical custom nodes for ComfyUI by Meti.sh
 ---
 
 ## ⚙️ How to Use
+
+> 💡 **Tip:** Hover your mouse over any input field to see a helpful tooltip with usage examples.
 
 ### ⏱️ Generation Time
 
