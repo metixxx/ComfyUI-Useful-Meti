@@ -1,6 +1,6 @@
 <!-- metadata
 title: "Useful-Meti: Timer, Image History & Save Nodes"
-description: "Custom nodes for ComfyUI: workflow timer, image history gallery, and advanced image saver with path output"
+description: "Useful custom nodes for ComfyUI by Meti: Outputs the total execution time (Generation Time) of your Nodes or workflow , Keeps a history of your generated images (up to 10) and shows them in a live-updating grid , Saves images with custom path and outputs filename & full path or Just Preview"
 tags: timer, image history, save image, generation time, past images, batch save, utility
 -->
 

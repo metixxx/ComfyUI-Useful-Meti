@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-useful-meti"
-version = "1.1.1"
-description = "Useful custom nodes for ComfyUI by Meti"
+version = "1.1.2"
+description = "Useful custom nodes for ComfyUI by Meti: Outputs the total execution time (Generation Time) of your Nodes or workflow , Keeps a history of your generated images (up to 10) and shows them in a live-updating grid , Saves images with custom path and outputs filename & full path or Just Preview"
 readme = "README.md"
 license = {text = "GPL-3.0"}
 authors = [{name = "Metixxx", email = "sharifi.3d@gmail.com"}]
@@ -10,6 +10,7 @@ authors = [{name = "Metixxx", email = "sharifi.3d@gmail.com"}]
 PublisherId = "metixxx"
 DisplayName = "Useful-Meti"
 Tags = ["timer", "generation time", "past images", "image history", "save image", "batch save", "workflow time", "performance", "utility", "useful", "meti", "time", "save", "history", "gallery"]
+Icon = "https://raw.githubusercontent.com/metixxx/ComfyUI-Useful-Meti/main/images/icon.png"
 
 [project.urls]
 Repository = "https://github.com/metixxx/ComfyUI-Useful-Meti"
