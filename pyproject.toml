@@ -1,6 +1,6 @@
 [project]
 name = "comfyui-useful-meti"
-version = "1.1.2"
+version = "1.1.3"
 description = "Useful custom nodes for ComfyUI by Meti: Outputs the total execution time (Generation Time) of your Nodes or workflow , Keeps a history of your generated images (up to 10) and shows them in a live-updating grid , Saves images with custom path and outputs filename & full path or Just Preview"
 readme = "README.md"
 license = {text = "GPL-3.0"}

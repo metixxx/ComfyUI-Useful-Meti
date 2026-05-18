@@ -25,6 +25,7 @@ class SaveImageAdvanced:
     RETURN_TYPES = ("IMAGE", "STRING", "STRING")
     RETURN_NAMES = ("image", "filename", "full_path")
     FUNCTION = "save"
+    OUTPUT_NODE = True
     CATEGORY = "Useful-Meti"
 
     def save(self, images, filename_prefix, custom_path, mode):
@@ -33,7 +34,6 @@ class SaveImageAdvanced:
         timestamp = time.strftime("%Y%m%d-%H%M%S")
         full_filename = f"{filename_prefix}_{timestamp}.png"
         
-        # ذخیره در temp (همیشه)
         temp_dir = folder_paths.get_temp_directory()
         temp_path = os.path.join(temp_dir, full_filename)
         
@@ -43,7 +43,6 @@ class SaveImageAdvanced:
         pil_img.save(temp_path)
         
         if save:
-            # کپی به مقصد نهایی
             if custom_path and custom_path.strip():
                 save_dir = custom_path.strip()
                 if not os.path.exists(save_dir):
@@ -59,13 +58,11 @@ class SaveImageAdvanced:
             preview_source = full_path
             preview_type = "output"
         else:
-            # حالت Preview - بدون [Preview] در خروجی
             filename_result = full_filename
-            path_result = temp_path  # مسیر واقعی، بدون [Preview]
+            path_result = temp_path
             preview_source = temp_path
             preview_type = "temp"
         
-        # نمایش preview در پنجره Image Viewer
         preview_results = [{
             "filename": os.path.basename(preview_source),
             "subfolder": "",
