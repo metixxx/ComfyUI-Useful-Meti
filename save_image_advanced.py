@@ -25,7 +25,7 @@ class SaveImageAdvanced:
     RETURN_TYPES = ("IMAGE", "STRING", "STRING")
     RETURN_NAMES = ("image", "filename", "full_path")
     FUNCTION = "save"
-    CATEGORY = "Meti Suite"
+    CATEGORY = "Useful-Meti"
 
     def save(self, images, filename_prefix, custom_path, mode):
         save = (mode == "Save")
