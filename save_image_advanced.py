@@ -6,6 +6,8 @@ import os
 import time
 import shutil
 import re
+import json
+from PIL import PngImagePlugin
 
 class SaveImageAdvanced:
     def __init__(self):
@@ -33,6 +35,10 @@ class SaveImageAdvanced:
                     "default": "Save",
                     "tooltip": "Save: Writes to disk and shows preview.\nPreview: Shows preview only (nothing saved to disk)."
                 }),
+            },
+            "hidden": {
+                "prompt": "PROMPT",
+                "extra_pnginfo": "EXTRA_PNGINFO",
             }
         }
     
@@ -100,7 +106,7 @@ class SaveImageAdvanced:
         full_path = os.path.join(save_dir, filename)
         return filename, full_path
 
-    def save(self, images, filename_prefix, custom_path, mode):
+    def save(self, images, filename_prefix, custom_path, mode, prompt=None, extra_pnginfo=None):
         # اگر filename_prefix خالی بود، مقدار پیش‌فرض بگذار
         if not filename_prefix or not filename_prefix.strip():
             filename_prefix = "ComfyUI"
@@ -116,7 +122,17 @@ class SaveImageAdvanced:
         img = images[0].cpu().numpy()
         img = (img * 255).astype(np.uint8)
         pil_img = Image.fromarray(img)
-        pil_img.save(temp_path)
+        
+        # ایجاد metadata
+        metadata = PngImagePlugin.PngInfo()
+        if prompt is not None:
+            metadata.add_text("prompt", json.dumps(prompt))
+        if extra_pnginfo is not None:
+            for key, value in extra_pnginfo.items():
+                metadata.add_text(key, json.dumps(value))
+        
+        # ذخیره در temp با metadata
+        pil_img.save(temp_path, pnginfo=metadata)
         
         if save:
             if custom_path and custom_path.strip():
@@ -127,6 +143,7 @@ class SaveImageAdvanced:
                 save_dir = self.output_dir
             
             full_filename, full_path = self.get_next_filename(parsed_prefix, save_dir, "png")
+            # کپی با حفظ metadata (shutil.copy2 حفظ می‌کند)
             shutil.copy2(temp_path, full_path)
             
             filename_result = full_filename
