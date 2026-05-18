@@ -43,7 +43,7 @@ A collection of practical custom nodes for ComfyUI by Meti.sh
 
 ### ⏱️ Generation Time
 
-Place it anywhere in your workflow. Timer starts automatically.
+Place it anywhere in your workflow and connect it to any type on Node . Output show the  execution time (Generation Time) of your Nodes or workflow .
 
 <div align="center">
 	
