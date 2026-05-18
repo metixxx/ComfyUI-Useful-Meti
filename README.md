@@ -6,7 +6,7 @@ tags: timer, image history, save image, generation time, past images, batch save
 
 # 🔧 ComfyUI-Useful-Meti
 
-A collection of practical custom nodes for ComfyUI by Meti.
+A collection of practical custom nodes for ComfyUI by Meti.sh
 
 ---
 
@@ -14,9 +14,9 @@ A collection of practical custom nodes for ComfyUI by Meti.
 
 | Node | Description |
 | :--- | :--- |
-| **⏱️ Generation Time** | Outputs the total execution time of your workflow. |
+| **⏱️ Generation Time** | Outputs the total execution time of your Nodes or workflow. |
 | **📸 Past Images** | Keeps a history of your generated images (up to 10) and shows them in a live-updating grid. |
-| **💾 Save Image Advanced** | Saves images with custom path and outputs filename & full path. |
+| **💾 Save Image Advanced** | Saves images with custom path and outputs filename & full path or Just Preview |
 
 ---
 
@@ -144,7 +144,6 @@ If you find this useful, you can send a donation via USDT:
     </td>
     <td align="center" width="30%">
       <!-- spacer -->
-	    <!-- spacer -->
      </td>
     <td align="center" width="35%">
       <img src="images/qrcode-trc20.png" width="160" />
