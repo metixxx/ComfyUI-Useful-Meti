@@ -61,7 +61,7 @@ class MetiGenerationTime:
     RETURN_TYPES = (any, "STRING", "STRING")
     RETURN_NAMES = ("passthrough", "time_with_label", "time_only")
     FUNCTION = "get_time"
-    CATEGORY = "Generation Time - Meti"
+    CATEGORY = "Useful-Meti"
 
     def get_time(self, input_any, input_string):
         elapsed = self.timer.get_workflow_elapsed_time()

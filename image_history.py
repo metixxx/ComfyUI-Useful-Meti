@@ -52,7 +52,7 @@ class ImageHistoryBuffer:
     RETURN_TYPES = ("IMAGE", "STRING", "STRING")
     RETURN_NAMES = ("passthrough", "history_names", "history_paths")
     FUNCTION = "process"
-    CATEGORY = "Meti Suite"
+    CATEGORY = "Useful-Meti"
 
     @classmethod
     def IS_CHANGED(cls, image, preset, image_name_opt=None, image_path_opt=None, reset_trigger=None):
