@@ -6,10 +6,11 @@ tags: model loader, metadata viewer, image history, save image, generation time,
 
 # 🔧 ComfyUI-Useful-Meti
 
-A complete ecosystem for ComfyUI by Mahdi Sharifi — from model loading to final image saving.
+A collection of ComfyUI nodes designed to make your workflow faster and easier — from loadA collection of ComfyUI nodes designed to make your workflow faster and easier — from loading models to saving final images.
+
+Created with ❤️ by Mahdi Sharifi (Metixxx)
 
 ---
-
 ## 🧩 The Ecosystem (Coming Soon) -   Next Ver : `2.0.0`
 
 A complete ecosystem for managing your entire workflow. Each node works independently or connects together for a seamless experience.
@@ -167,7 +168,7 @@ Save images with custom path and get filename + full path as output.
 
 ## 🙏 Credits
 
-- **Maintainer:** [Metixxx](https://github.com/metixxx)
+- **Author & Maintainer:** Mahdi Sharifi [Metixxx] (https://github.com/metixxx)
 - **Inspiration for Generation Time:** [Shannooty/ComfyUI-Timer-Nodes](https://github.com/Shannooty/ComfyUI-Timer-Nodes)
 
 ---
