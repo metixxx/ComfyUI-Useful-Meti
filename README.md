@@ -1,28 +1,51 @@
 <!-- metadata
-title: "Useful-Meti: Timer, Image History & Save Nodes"
-description: "Useful custom nodes for ComfyUI by Meti: Outputs the total execution time (Generation Time) of your Nodes or workflow , Keeps a history of your generated images (up to 10) and shows them in a live-updating grid , Saves images with custom path and outputs filename & full path or Just Preview"
-tags: timer, image history, save image, generation time, past images, batch save, utility
+title: "Useful-Meti: Complete Workflow Ecosystem for ComfyUI"
+description: "Complete ecosystem: Universal Model Loader, Model Viewer, Save Image Advanced, Images History, Generation Time, plus CivitAI integration"
+tags: model loader, metadata viewer, image history, save image, generation time, civitai, utility
 -->
 
 # 🔧 ComfyUI-Useful-Meti
 
-A collection of practical custom nodes for ComfyUI by Mahdi Sharifi . 
+A complete ecosystem for ComfyUI by Mahdi Sharifi — from model loading to final image saving.
 
 ---
 
-## 📦 Nodes
+## 🧩 The Ecosystem (Coming Soon) -   Next Ver : `2.0.0`
+
+A complete ecosystem for managing your entire workflow. Each node works independently or connects together for a seamless experience.
+
+| Node | Status | Key Features |
+|:-----|:-------|:--------------|
+| 📥 Model Metadata Collector | 🚧New (Coming Soon)| Downloads model info, previews, and tags from CivitAI |
+| 🔄 Universal Model Loader | 🚧New (Coming Soon)|Loads any model. Integrated with Lora-Manager Node. Clean UI with Select Panel, search, filters, previews and ...|
+| 📋 Model Viewer | 🚧New (Coming Soon)| Shows architecture, size, tags, description, preview gallery, trigger words |
+| 🔧 Metadata Builder |  🚧New (Coming Soon)| Builds custom metadata for PNG |
+| 💾 Save Image Advanced |📈 Upgraded (coming soon)| Save mode OR Preview mode. Accepts metadata |
+| 🎞️ Images History |📈 Upgraded (coming soon)| Live grid, select, compare, send to nodes, and more |
+| ⏱️ Generation Time | ✓ Stable | Workflow execution timer — independent |
+
+**Legend:** ✓ Stable Node | 📈 Upgraded Node (coming soon) |  🚧New Node (Coming Soon)
+
+---
+<div style="text-align: center;">
+  <img src="images/Useful-Meti-01.png" style="max-width: 100%; height: auto;" />
+</div>
+
+---
+
+> 📸 View more examples : [1](images/Useful-Meti-02.png), [2](images/Useful-Meti-03.png), [3](images/Useful-Meti-04.png), [4](images/Useful-Meti-05.png), [5](images/Useful-Meti-06.png)
+
+---
+
+## ✅ Currently Available (Stable) -   Ver : `1.1.3`
+
+These nodes are ready to use right now:
 
 | Node | Description |
 | :--- | :--- |
-| **⏱️ Generation Time** | Outputs the total execution time of your Nodes or workflow. |
-| **📸 Past Images** | Keeps a history of your generated images (up to 10) and shows them in a live-updating grid. |
-| **💾 Save Image Advanced** | Saves images with custom path and outputs filename & full path or Just Preview |
-
-<div style="text-align: center;">
-  <img src="images/Useful-Meti-01.png" style="max-width: 100%; height: auto; object-fit: contain; background-color: #f0f0f0;" />
-</div>
-
-> 📸 [View more examples](images/Useful-Meti-02.png)
+| **⏱️ Generation Time** | Outputs the total execution time of your workflow |
+| **🎞️ Images History** | Keeps history of generated images (up to 10) in a live-updating grid |
+| **💾 Save Image Advanced** | Saves images with custom path, dynamic filename, or preview only |
 
 ---
 
@@ -72,7 +95,7 @@ Use this node to compare different models, samplers, or schedulers:
 
 ---
 
-### 📸 Past Images
+### 🎞️ Images History
 
 Keeps a history of your generated images (up to 10) and shows them in a live-updating grid.  
 The grid preserves each image's **original aspect ratio** inside the frame, so you can easily compare different outputs.
@@ -182,7 +205,9 @@ Your support helps me add new features, improve documentation, and keep everythi
 </table>
 </div>
 
-Thank you for any contribution — it truly means a lot! 🙏
+
+Any contribution — whether financial support, testing nodes, reporting bugs, or sharing feedback — helps improve this project. Thank you! 🙏
+
 
 ---
 
