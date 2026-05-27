@@ -95,7 +95,7 @@ Use this node to compare different models, samplers, or schedulers:
 
 ---
 
-### 🎞️ Images History
+### 🎞️ Images History (Past Images)
 
 Keeps a history of your generated images (up to 10) and shows them in a live-updating grid.  
 The grid preserves each image's **original aspect ratio** inside the frame, so you can easily compare different outputs.
