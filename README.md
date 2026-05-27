@@ -8,7 +8,7 @@ tags: model loader, metadata viewer, image history, save image, generation time,
 
 A collection of ComfyUI nodes designed to make your workflow faster and easier — from loadA collection of ComfyUI nodes designed to make your workflow faster and easier — from loading models to saving final images.
 
-Created with ❤️ by Mahdi Sharifi (Metixxx)
+Created by Mahdi Sharifi (Metixxx)
 
 ---
 ## 🧩 The Ecosystem (Coming Soon) -   Next Ver : `2.0.0`
